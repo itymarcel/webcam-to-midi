@@ -41,6 +41,8 @@ npm run build    # build an installer for the current OS
 
 `npm run prepare-assets` runs automatically. It copies the MediaPipe WASM and fonts into `src/vendor/` and downloads the hand model once. All of it is git-ignored.
 
+App icon: edit `src-tauri/app-icon.png` (square artwork), then run `npx tauri icon src-tauri/app-icon.png -o src-tauri/icons` for the Windows/PNG icons, followed by `swift scripts/make_mac_icon.swift src-tauri/app-icon.png` for the rounded macOS `icon.icns`.
+
 Build output:
 
 - macOS: `src-tauri/target/release/bundle/dmg/*.dmg` and `…/macos/Webcam to MIDI.app`
