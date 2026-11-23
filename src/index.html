@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Webcam to MIDI</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="netguard.js"></script>
+  </head>
+  <body>
+    <main id="stage">
+      <video id="video" autoplay playsinline muted></video>
+      <canvas id="overlay"></canvas>
+
+      <div id="status" class="status" hidden></div>
+
+      <div class="bar">
+        <div class="readouts">
+          <button class="readout" id="pillX" type="button" aria-pressed="true"
+                  title="Click to toggle sending CC 20">X: <b id="valX">0</b></button>
+          <button class="readout" id="pillY" type="button" aria-pressed="true"
+                  title="Click to toggle sending CC 21">Y: <b id="valY">0</b></button>
+        </div>
+
+        <div class="controls">
+          <div class="slider" id="smoothing" role="slider" tabindex="0"
+               aria-label="Smoothing" aria-valuemin="0" aria-valuemax="100">
+            <div class="slider-fill"></div>
+            <span class="slider-label">Smoothing</span>
+            <span class="slider-value"></span>
+          </div>
+
+          <div class="dropdown" id="dd-lost"></div>
+          <div class="dropdown" id="dd-channel"></div>
+          <div class="dropdown" id="dd-midi"></div>
+          <div class="dropdown" id="dd-camera"></div>
+
+          <button class="live" id="live" type="button" aria-pressed="false"
+                  title="Float the window on top and hide the controls"><i></i>LIVE</button>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

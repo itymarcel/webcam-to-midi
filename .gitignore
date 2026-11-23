@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Generated at build time (copied from node_modules + downloaded model, ~25 MB)
+src/vendor/
+
+# Rust / Tauri build output (gigabytes)
+src-tauri/target/
+src-tauri/gen/
+
+# Packaged apps / installers
+*.dmg
+*.app
+*.exe
+*.msi
+*.zip
+
+# Large binaries
+*.task
+*.wasm
+*.tflite
+
+# Design mockups / screenshots
+layout.png
+
+# Logs, env, editor & OS cruft
+*.log
+npm-debug.log*
+.env
+.env.*
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
